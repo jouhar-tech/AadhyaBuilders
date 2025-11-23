@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhya Builders - Building Homes That Last a Lifetime</title>
+    <link rel="stylesheet" href="./aadhya-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/aadhyalogo2.png" alt="Aadhya Builders Logo" id="company-logo">
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+                <source src="images/aadhyaoffcvdo - Trim.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-testid="hero-title">We Build Homes That Last a Lifetime</h1>
+            <p class="hero-subtitle" data-testid="hero-subtitle">Trusted construction services with unmatched quality and craftsmanship</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" data-testid="view-projects-btn">Our Projects</a>
+                <a href="#contact" class="btn btn-secondary" data-testid="contact-us-btn">Contact Us</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="about-title">About Aadhya Builders</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Building Dreams, Creating Homes</h3>
+                    <p>With over <strong>15 years of experience</strong> in the construction industry, Aadhya Builders has established itself as a trusted name in residential construction. We specialize in creating homes that blend modern design with traditional craftsmanship.</p>
+                    <p>Our commitment to quality, timely delivery, and customer satisfaction has helped us deliver <strong>500+ dream homes</strong> to families across the region. Every project we undertake is a testament to our dedication to excellence.</p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quality Construction</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Timely Delivery</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transparent Pricing</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Customer Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-media">
+                    <div class="about-video-wrapper">
+                        <video controls class="about-video" poster="https://via.placeholder.com/600x400/2d3748/ffffff?text=Office+Video">
+                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption">Our state-of-the-art office and team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="services-title">Our Services</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Comprehensive house construction solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-testid="service-card-1">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>House Construction</h3>
+                    <p>Complete residential construction from foundation to finishing, built with premium materials and expert craftsmanship.</p>
+                </div>
+                <div class="service-card" data-testid="service-card-2">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Planning & Design</h3>
+                    <p>Professional planning services that transform your vision into detailed construction-ready designs.</p>
+                </div>
+                <div class="service-card" data-testid="service-card-3">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Architectural Layout</h3>
+                    <p>Innovative architectural solutions that maximize space, functionality, and aesthetic appeal.</p>
+                </div>
+                <div class="service-card" data-testid="service-card-4">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Structural Construction</h3>
+                    <p>Robust structural engineering ensuring safety, durability, and compliance with all building codes.</p>
+                </div>
+                <div class="service-card" data-testid="service-card-5">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3>Interior Finishing</h3>
+                    <p>Exquisite interior finishes including flooring, painting, lighting, and custom fittings.</p>
+                </div>
+                <div class="service-card" data-testid="service-card-6">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Renovation</h3>
+                    <p>Expert renovation services to modernize and enhance your existing property with minimal disruption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="projects-title">Our Projects</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">A showcase of our finest work</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-testid="project-card-1" onclick="openProjectModal(0)">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Modern Villa Project">
+                    <div class="project-overlay">
+                        <h3>Modern Villa</h3>
+                        <p>Luxury 4BHK Villa</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-testid="project-card-2" onclick="openProjectModal(1)">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Contemporary House">
+                    <div class="project-overlay">
+                        <h3>Contemporary House</h3>
+                        <p>3BHK Modern Home</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-testid="project-card-3" onclick="openProjectModal(2)">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Traditional Home">
+                    <div class="project-overlay">
+                        <h3>Traditional Home</h3>
+                        <p>Classic 5BHK Residence</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-testid="project-card-4" onclick="openProjectModal(3)">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Minimalist Design">
+                    <div class="project-overlay">
+                        <h3>Minimalist Design</h3>
+                        <p>2BHK Compact Home</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-testid="project-card-5" onclick="openProjectModal(4)">
+                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600" alt="Duplex Villa">
+                    <div class="project-overlay">
+                        <h3>Duplex Villa</h3>
+                        <p>6BHK Luxury Duplex</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="project-card" data-testid="project-card-6" onclick="openProjectModal(5)">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Eco-Friendly Home">
+                    <div class="project-overlay">
+                        <h3>Eco-Friendly Home</h3>
+                        <p>3BHK Sustainable Living</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-slider">
+                    <button class="slider-btn prev" onclick="changeSlide(-1)" data-testid="prev-slide-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="modal-image-container">
+                        <img id="modalImage" src="" alt="Project Image">
+                    </div>
+                    <button class="slider-btn next" onclick="changeSlide(1)" data-testid="next-slide-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-details" id="modalDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="why-choose-title">Why Choose Us</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-testid="stat-card-1">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-card" data-testid="stat-card-2">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">Homes Delivered</div>
+                </div>
+                <div class="stat-card" data-testid="stat-card-3">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="450">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card" data-testid="stat-card-4">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="process-title">Our Construction Process</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">A systematic approach to building your dream home</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-testid="timeline-step-1">
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 1: Consultation</h3>
+                        <p>Initial meeting to understand your requirements, budget, and vision for your dream home.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="timeline-step-2">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 2: Planning</h3>
+                        <p>Detailed project planning including timeline, budget estimation, and resource allocation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="timeline-step-3">
+                    <div class="timeline-icon">
+                        <i class="fas fa-draw-polygon"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 3: Designing</h3>
+                        <p>Architectural and structural design creation with 3D visualizations and detailed blueprints.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="timeline-step-4">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 4: Construction</h3>
+                        <p>Systematic execution of the project with regular quality checks and progress updates.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-testid="timeline-step-5">
+                    <div class="timeline-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Step 5: Handover</h3>
+                        <p>Final inspection, documentation, and handing over the keys to your completed dream home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="testimonials-title">What Our Clients Say</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card" data-testid="testimonial-card-1">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Aadhya Builders exceeded our expectations in every way. The quality of construction, attention to detail, and timely delivery made our home-building experience smooth and enjoyable."</p>
+                        <div class="testimonial-author">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Villa Owner, Bangalore</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-testid="testimonial-card-2">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Professional team, transparent pricing, and exceptional craftsmanship. Our dream home is now a reality thanks to Aadhya Builders. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <h4>Priya Sharma</h4>
+                            <p>Homeowner, Chennai</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-testid="testimonial-card-3">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"From planning to handover, everything was handled professionally. The team was responsive, and the quality of work is outstanding. Worth every penny!"</p>
+                        <div class="testimonial-author">
+                            <h4>Anand Verma</h4>
+                            <p>Duplex Owner, Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" onclick="moveTestimonial(-1)" data-testid="prev-testimonial-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonial-btn next" onclick="moveTestimonial(1)" data-testid="next-testimonial-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-testid="contact-title">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Let's discuss your dream home project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-testid="contact-phone">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                            <p>+91 98765 43211</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-testid="contact-email">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@aadhyabuilders.com</p>
+                            <p>projects@aadhyabuilders.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-testid="contact-address">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>123, Builder's Avenue,<br>Tech Park, Bangalore - 560001<br>Karnataka, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6474519788744!2d77.59369931482211!3d12.971598990861568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" data-testid="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required data-testid="contact-name-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required data-testid="contact-phone-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required data-testid="contact-email-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required data-testid="contact-message-input"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-testid="contact-submit-btn">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/aadhyalogo2.png" alt="Aadhya Builders" class="footer-logo">
+                    <p>Building dreams, creating homes that last a lifetime. Your trusted construction partner.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" data-testid="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" data-testid="social-twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" data-testid="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" data-testid="social-youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">House Construction</a></li>
+                        <li><a href="#services">Planning & Design</a></li>
+                        <li><a href="#services">Architectural Layout</a></li>
+                        <li><a href="#services">Renovation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@aadhyabuilders.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aadhya Builders. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Quality Homes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp" data-testid="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="./aadhya-script.js"></script>
+</body>
+</html>
