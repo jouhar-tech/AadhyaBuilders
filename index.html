@@ -84,13 +84,18 @@
                     </div>
                 </div>
                 <div class="about-media">
-                    <div class="about-video-wrapper">
-                        <video controls class="about-video" poster="https://via.placeholder.com/600x400/2d3748/ffffff?text=Office+Video">
-                            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
-                        </video>
-                        <p class="media-caption">Our state-of-the-art office and team</p>
-                    </div>
-                </div>
+    <div class="about-video-wrapper">
+        <iframe 
+            class="about-video"
+            src="https://www.youtube.com/embed/mSELPNJ_OoU"
+            title="Aadhya Builders Office Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <p class="media-caption">Our state-of-the-art office and team</p>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -160,7 +165,7 @@
             </div>
             <div class="projects-grid" id="projectsGrid">
                 <div class="project-card" data-testid="project-card-1" onclick="openProjectModal(0)">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Modern Villa Project">
+                    <img src="images/house1.jpg" alt="Modern Villa Project">
                     <div class="project-overlay">
                         <h3>Modern Villa</h3>
                         <p>Luxury 4BHK Villa</p>
@@ -168,7 +173,7 @@
                     </div>
                 </div>
                 <div class="project-card" data-testid="project-card-2" onclick="openProjectModal(1)">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Contemporary House">
+                    <img src="images/house2.jpg" alt="Contemporary House">
                     <div class="project-overlay">
                         <h3>Contemporary House</h3>
                         <p>3BHK Modern Home</p>
@@ -176,7 +181,7 @@
                     </div>
                 </div>
                 <div class="project-card" data-testid="project-card-3" onclick="openProjectModal(2)">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Traditional Home">
+                    <img src="images/house3.jpg" alt="Traditional Home">
                     <div class="project-overlay">
                         <h3>Traditional Home</h3>
                         <p>Classic 5BHK Residence</p>
@@ -184,7 +189,7 @@
                     </div>
                 </div>
                 <div class="project-card" data-testid="project-card-4" onclick="openProjectModal(3)">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Minimalist Design">
+                    <img src="images/house5.jpg" alt="Minimalist Design">
                     <div class="project-overlay">
                         <h3>Minimalist Design</h3>
                         <p>2BHK Compact Home</p>
@@ -192,7 +197,7 @@
                     </div>
                 </div>
                 <div class="project-card" data-testid="project-card-5" onclick="openProjectModal(4)">
-                    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600" alt="Duplex Villa">
+                    <img src="images/house6.jpg" alt="Duplex Villa">
                     <div class="project-overlay">
                         <h3>Duplex Villa</h3>
                         <p>6BHK Luxury Duplex</p>
@@ -200,7 +205,7 @@
                     </div>
                 </div>
                 <div class="project-card" data-testid="project-card-6" onclick="openProjectModal(5)">
-                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Eco-Friendly Home">
+                    <img src="images/house4.jpg" alt="Eco-Friendly Home">
                     <div class="project-overlay">
                         <h3>Eco-Friendly Home</h3>
                         <p>3BHK Sustainable Living</p>
@@ -212,29 +217,37 @@
     </section>
 
     <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeProjectModal()">&times;</span>
-            <div class="modal-body">
-                <div class="modal-slider">
-                    <button class="slider-btn prev" onclick="changeSlide(-1)" data-testid="prev-slide-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="modal-image-container">
-                        <img id="modalImage" src="" alt="Project Image">
-                    </div>
-                    <button class="slider-btn next" onclick="changeSlide(1)" data-testid="next-slide-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+       <button class="modal-back-btn" onclick="closeProjectModal()">
+    ← Back
+</button>
+
+        <div class="modal-body">
+            <div class="modal-slider">
+                <button class="slider-btn prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- MEDIA CONTAINER (Image OR Video) -->
+                <div class="modal-image-container" id="modalMediaContainer">
+                    <!-- JS injects img or video here -->
                 </div>
-                <div class="modal-info">
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalDescription"></p>
-                    <div class="modal-details" id="modalDetails"></div>
-                </div>
+
+                <button class="slider-btn next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="modal-details" id="modalDetails"></div>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- Why Choose Us Section -->
     <section class="why-choose-section">
@@ -354,7 +367,7 @@
                         <p class="testimonial-text">"Aadhya Builders exceeded our expectations in every way. The quality of construction, attention to detail, and timely delivery made our home-building experience smooth and enjoyable."</p>
                         <div class="testimonial-author">
                             <h4>Rajesh Kumar</h4>
-                            <p>Villa Owner, Bangalore</p>
+                            <p>Villa Owner, Puttur</p>
                         </div>
                     </div>
                     <div class="testimonial-card" data-testid="testimonial-card-2">
@@ -368,21 +381,7 @@
                         <p class="testimonial-text">"Professional team, transparent pricing, and exceptional craftsmanship. Our dream home is now a reality thanks to Aadhya Builders. Highly recommended!"</p>
                         <div class="testimonial-author">
                             <h4>Priya Sharma</h4>
-                            <p>Homeowner, Chennai</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-card" data-testid="testimonial-card-3">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"From planning to handover, everything was handled professionally. The team was responsive, and the quality of work is outstanding. Worth every penny!"</p>
-                        <div class="testimonial-author">
-                            <h4>Anand Verma</h4>
-                            <p>Duplex Owner, Hyderabad</p>
+                            <p>Homeowner, Mangalore</p>
                         </div>
                     </div>
                 </div>
@@ -414,8 +413,8 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <p>+91 98765 43210</p>
-                            <p>+91 98765 43211</p>
+                            <p>+91 96866 16207</p>
+                            <p>+91 81975 66207</p>
                         </div>
                     </div>
                     <div class="contact-item" data-testid="contact-email">
@@ -424,8 +423,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>info@aadhyabuilders.com</p>
-                            <p>projects@aadhyabuilders.com</p>
+                            <p>Vtlabhi@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item" data-testid="contact-address">
@@ -434,12 +432,15 @@
                         </div>
                         <div>
                             <h4>Office Address</h4>
-                            <p>123, Builder's Avenue,<br>Tech Park, Bangalore - 560001<br>Karnataka, India</p>
+                            <p>Aadya builders,<br>First floor, 
+                            Ashwini Complex, Near Kallega Temple,<br>Puttur Taluk, Dakshina Kannada 574201</p>
                         </div>
                     </div>
                     <div class="contact-map">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6474519788744!2d77.59369931482211!3d12.971598990861568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890" 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62250.78258627873
+                        !2d75.142964!3d12.799666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4bd14651732e9%
+                        3A0x9af6875e9ba25096!2sAshwini%20Complex%2C%20Nehru%20Nagar%2C%20Puttur%2C%20
+                        Karnataka%20574203!5e0!3m2!1sen!2sin!4v1765705269213!5m2!1sen!2sin"
                             width="100%" 
                             height="250" 
                             style="border:0;" 
@@ -463,7 +464,7 @@
                         <div class="form-group">
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required data-testid="contact-message-input"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full" data-testid="contact-submit-btn">Send Message</button>
+                        <a href="mailto:yourmail@example.com?subject=Contact%20from%20Website" class="btn btn-primary btn-full" data-testid="contact-submit-btn">Send Message</a>
                     </form>
                     <div id="formMessage" class="form-message"></div>
                 </div>
@@ -479,11 +480,11 @@
                     <img src="images/aadhyalogo2.png" alt="Aadhya Builders" class="footer-logo">
                     <p>Building dreams, creating homes that last a lifetime. Your trusted construction partner.</p>
                     <div class="social-icons">
-                        <a href="#" aria-label="Facebook" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919611678864" aria-label="WhatsApp" data-testid="social-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="#" aria-label="Instagram" data-testid="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter" data-testid="social-twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="LinkedIn" data-testid="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="YouTube" data-testid="social-youtube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -508,20 +509,26 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-envelope"></i> info@aadhyabuilders.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</li>
+                        <li><i class="fas fa-phone"></i> +91 96866 16207</li>
+                        <li><i class="fas fa-envelope"></i> Vtlabhi@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Puttur, Karnataka</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Aadhya Builders. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for Quality Homes</p>
-            </div>
+    <p>
+        &copy; 2025 Aadhya Builders. All Rights Reserved. | Design brilliance by JVR 
+        <a href="https://wa.me/919611678864" aria-label="WhatsApp" data-testid="social-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>.
+    </p>
+</div>
+
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp" data-testid="whatsapp-btn">
+    <a href="https://wa.me/9196866 16207" class="whatsapp-float" target="_blank" aria-label="Contact on WhatsApp" data-testid="whatsapp-btn">
         <i class="fab fa-whatsapp"></i>
     </a>
 

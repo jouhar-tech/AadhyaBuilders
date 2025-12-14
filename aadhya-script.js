@@ -83,14 +83,36 @@ if (statsSection) {
 }
 
 // Project Modal Functionality
+function renderMedia(project, index) {
+    const container = document.getElementById('modalMediaContainer');
+    container.innerHTML = '';
+
+    // Images first
+    if (index < project.images.length) {
+        container.innerHTML = `
+            <img src="${project.images[index]}" alt="Project Image">
+        `;
+    } else {
+        const videoIndex = index - project.images.length;
+        container.innerHTML = `
+            <video controls autoplay muted playsinline>
+                <source src="${project.videos[videoIndex]}" type="video/mp4">
+            </video>
+        `;
+    }
+}
+
 const projectsData = [
     {
         title: 'Modern Villa',
         description: 'A luxurious 4BHK villa featuring contemporary design elements, premium finishes, and state-of-the-art amenities. Built with the finest materials and attention to detail.',
         images: [
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800'
+            'images/house1.jpg',
+            'images/house11.jpg',
+            'images/house111.jpg'
+        ],
+        videos: [
+        'https://res.cloudinary.com/dwyvvjcqb/video/upload/v1765712657/Video_Project_2_1_s1mr6i.mp4'
         ],
         details: {
             'Area': '3500 sq.ft',
@@ -103,9 +125,12 @@ const projectsData = [
         title: 'Contemporary House',
         description: 'A beautifully designed 3BHK modern home that perfectly balances aesthetics and functionality. Features include spacious rooms, natural lighting, and elegant interiors.',
         images: [
-            'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800',
-            'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800'
+            'images/house2.jpg',
+            'images/house22.jpg',
+            
+        ],
+        videos: [
+        'https://res.cloudinary.com/dwyvvjcqb/video/upload/v1765707134/house222_a2f0da.mp4'
         ],
         details: {
             'Area': '2800 sq.ft',
@@ -118,9 +143,11 @@ const projectsData = [
         title: 'Traditional Home',
         description: 'Classic 5BHK residence combining traditional architectural elements with modern conveniences. Perfect for large families seeking comfort and style.',
         images: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-            'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'
+            'images/house3.jpg',
+            'images/house33.jpg'
+        ],
+        videos: [
+        'https://res.cloudinary.com/dwyvvjcqb/video/upload/v1765710151/house555_vxrg2k.mp4'
         ],
         details: {
             'Area': '4200 sq.ft',
@@ -133,9 +160,8 @@ const projectsData = [
         title: 'Minimalist Design',
         description: 'A compact yet efficient 2BHK home embracing minimalist design philosophy. Clean lines, optimal space utilization, and modern amenities.',
         images: [
-            'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'
+            'images/house6.jpg',
+            'images/house66.jpg'
         ],
         details: {
             'Area': '1800 sq.ft',
@@ -148,9 +174,8 @@ const projectsData = [
         title: 'Duplex Villa',
         description: 'Spectacular 6BHK luxury duplex villa with panoramic views. Features include home theater, gym, swimming pool, and landscaped gardens.',
         images: [
-            'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800',
-            'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'
+            'images/house5.jpg',
+            'images/house55.jpg'
         ],
         details: {
             'Area': '5500 sq.ft',
@@ -163,9 +188,9 @@ const projectsData = [
         title: 'Eco-Friendly Home',
         description: 'Sustainable 3BHK home designed with eco-friendly materials and energy-efficient systems. Features rainwater harvesting, solar panels, and natural ventilation.',
         images: [
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800',
-            'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800'
+            'images/house4.jpg',
+            'images/house5.jpg',
+            'images/house55.jpg'
         ],
         details: {
             'Area': '2600 sq.ft',
@@ -187,7 +212,7 @@ function openProjectModal(projectIndex) {
     
     document.getElementById('modalTitle').textContent = project.title;
     document.getElementById('modalDescription').textContent = project.description;
-    document.getElementById('modalImage').src = project.images[currentSlide];
+    renderMedia(project, currentSlide);
     
     const detailsHtml = Object.entries(project.details)
         .map(([key, value]) => `<div><strong>${key}:</strong> ${value}</div>`)
@@ -206,15 +231,15 @@ function closeProjectModal() {
 
 function changeSlide(direction) {
     const project = projectsData[currentProject];
+    const totalSlides =
+        project.images.length + (project.videos ? project.videos.length : 0);
+
     currentSlide += direction;
-    
-    if (currentSlide < 0) {
-        currentSlide = project.images.length - 1;
-    } else if (currentSlide >= project.images.length) {
-        currentSlide = 0;
-    }
-    
-    document.getElementById('modalImage').src = project.images[currentSlide];
+
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+
+    renderMedia(project, currentSlide);
 }
 
 // Close modal when clicking outside
